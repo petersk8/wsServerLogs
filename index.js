@@ -9,7 +9,7 @@ server.on('connection', function (socket) {
     //console.log('Socket Server Connected');
   sockets.push(socket);
 
-  // When you receive a message, send that message to every socket.
+  // receiving messages
   socket.on('message', function (msg) {
     //sockets.forEach((s) => s.send(msg));
     console.log(msg);
