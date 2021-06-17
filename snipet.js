@@ -2,7 +2,7 @@
  * This is a method to include in any javascript app 
  * so it can comunicate with the server app running on a machine 
  */
-wsLogs(values) {
+function wsLogs(values) {
     /*
      * port is setted on server app (index.js)
      * the ip address of the server where the app is running.
