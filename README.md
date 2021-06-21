@@ -1,5 +1,5 @@
 # wsServerLogs
-Websockets loger, listen to messages and then logs in to console.
+Websockets loger, listen to messages and then logs the in console. Used mostly as a remote debuging tool.
 
 ## How to Use
 
