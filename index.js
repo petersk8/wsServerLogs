@@ -3,16 +3,27 @@ const server = new WebSocket.Server({
   port: 6565,
 });
 
+// Get filter words from command line arguments
+const filterWords = process.argv[2]
+  ? process.argv[2].split(',').map(w => w.trim()).filter(Boolean)
+  : [];
+
 let sockets = [];
 console.log('Socket Server Running');
+console.log('Filter words:', filterWords);
+
 server.on('connection', function (socket) {
-    //console.log('Socket Server Connected');
   sockets.push(socket);
 
   // receiving messages
   socket.on('message', function (msg) {
-    //sockets.forEach((s) => s.send(msg));
-    console.log(getFullTimestamp() + ' - ' + msg);
+    // Only log messages containing any filter word, or all if no filter
+    if (
+      filterWords.length === 0 ||
+      filterWords.some(word => msg.includes(word))
+    ) {
+      console.log(getFullTimestamp() + ' - ' + msg);
+    }
   });
 
   // When a socket closes, or disconnects, remove it from the array.
