@@ -16,3 +16,5 @@ Websockets loger, listen to messages and then logs the in console. Used mostly a
 -Now you can copy the method from the snipet.js file and paste it on yout code to send messages to the server.
 
 -All messages will appear at the terminal screen where the server app is running.
+
+-To filter the logs output just run **npm run server fliter1,filter2,filter3** and then only logs with those filters on it will be shown
