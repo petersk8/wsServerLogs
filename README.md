@@ -13,7 +13,7 @@ Websockets loger, listen to messages and then logs the in console. Used mostly a
 
 -On the terminal execute the command **npm run server** this will start your server application and start listenig for websocket connections.
 
--Now you can copy the method from the snipet.js file and paste it on yout code to send messages to the server.
+-Now you can copy the method from the snipet.js file and paste it on your code to send messages to the server.
 
 -All messages will appear at the terminal screen where the server app is running.
 
